@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
+import dora.widget.bottomdialog.R
 
 open class DoraDialog {
 
@@ -25,6 +26,7 @@ open class DoraDialog {
         private set
     private var onAttachListener: OnAttachListener? = null
     private var onDismissListener: OnDismissListener? = null
+    private var isLoaded: Boolean = false
 
     protected constructor(builder: Builder) {
         ownActivity = builder.context as Activity
@@ -52,7 +54,7 @@ open class DoraDialog {
     }
 
     fun show() {
-        onAttached(dialogRoot)
+        initViews(dialogRoot)
         isShown = true
     }
 
@@ -87,7 +89,7 @@ open class DoraDialog {
         dismissing = true
     }
 
-    private fun onAttached(viewRoot: ViewGroup) {
+    private fun initViews(viewRoot: ViewGroup) {
         decorView.addView(viewRoot)
         pushInAnim?.let {
             dialogContent.startAnimation(it)
@@ -107,7 +109,10 @@ open class DoraDialog {
                 dismiss()
             }
         })
-        onAttachListener?.onAttached(dialogWindow!!)
+        if (!isLoaded) {
+            onAttachListener?.onFirstAttached(dialogWindow!!)
+            isLoaded = true
+        }
     }
 
     fun onAttach(l: OnAttachListener): DoraDialog {
@@ -121,7 +126,7 @@ open class DoraDialog {
     }
 
     interface OnAttachListener {
-        fun onAttached(window: ADialogWindow)
+        fun onFirstAttached(window: ADialogWindow)
     }
 
     interface OnDismissListener {

@@ -23,5 +23,5 @@ dependencyResolutionManagement {
         maven { url "https://maven.aliyun.com/repository/jcenter" }
     }
 }
-rootProject.name = "dview-template"
+rootProject.name = "dview-bottom-dialog"
 include ':lib'

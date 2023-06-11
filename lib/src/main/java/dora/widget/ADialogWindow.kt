@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.widget.LinearLayout
 import android.os.Build
 import android.view.*
+import dora.widget.bottomdialog.R
 import java.lang.ClassCastException
 import java.lang.Exception
 import java.lang.reflect.Field
