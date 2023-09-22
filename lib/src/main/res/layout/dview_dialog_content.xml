@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_dialog_panel" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dview_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dview_shape_dialog_bg"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/color_dialog_panel" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/dview_selector_dialog_bg"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/color_dialog_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
