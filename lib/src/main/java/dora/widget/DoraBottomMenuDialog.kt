@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.OnItemChildClickListener
+import dora.widget.bean.BottomMenu
 import dora.widget.bottomdialog.R
 
 class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
@@ -56,7 +57,18 @@ class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
     private fun initView(contentView: View, menus: Array<String>) {
         val recyclerView = contentView.findViewById<RecyclerView>(R.id.dview_recycler_view)
         val adapter = MenuAdapter()
-        adapter.setList(menus.toMutableList())
+        val list = mutableListOf<BottomMenu>()
+        menus.forEachIndexed { index, s ->
+            when (index) {
+                0 -> {
+                    list.add(BottomMenu(s, BottomMenu.TOP_MENU))
+                }
+                else -> {
+                    list.add(BottomMenu(s, BottomMenu.NORMAL_MENU))
+                }
+            }
+        }
+        adapter.setList(list)
         recyclerView.adapter = adapter
         val decoration = DividerItemDecoration(contentView.context, DividerItemDecoration.VERTICAL)
         recyclerView.addItemDecoration(decoration)
