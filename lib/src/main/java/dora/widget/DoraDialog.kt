@@ -73,14 +73,12 @@ open class DoraDialog {
         pushOutAnim!!.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation) {}
             override fun onAnimationEnd(animation: Animation) {
-                decorView.post(object : Runnable {
-                    override fun run() {
-                        decorView.removeView(dialogRoot)
-                        dismissing = false
-                        isShown = false
-                        onDismissListener?.onDismiss()
-                    }
-                })
+                decorView.post {
+                    decorView.removeView(dialogRoot)
+                    dismissing = false
+                    isShown = false
+                    onDismissListener?.onDismiss()
+                }
             }
 
             override fun onAnimationRepeat(animation: Animation) {}

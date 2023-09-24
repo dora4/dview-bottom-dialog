@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 
 open class DoraDialogWindow : ADialogWindow {
+
     private var canTouchOutside = false
     private var onInflateListener: OnInflateListener? = null
     private var contentView: View? = null
