@@ -16,7 +16,6 @@
             android:id="@+id/dview_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/dview_shape_dialog_bg"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         <View

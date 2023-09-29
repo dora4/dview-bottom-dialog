@@ -5,6 +5,5 @@
            android:fromXDelta="0"
            android:fromYDelta="0"
            android:toXDelta="0"
-           android:toYDelta="100%"
-    tools:ignore="MissingDefaultResource">
+           android:toYDelta="100%">
 </translate>

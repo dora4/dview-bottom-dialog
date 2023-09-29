@@ -35,8 +35,6 @@ class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
                 LayoutInflater.from(activity).inflate(R.layout.dview_dialog_content, null)
             initView(contentView, menus)
             bottomDialog!!.setContentView(contentView)
-
-            // 点外部不消失
             bottomDialog!!.setCanceledOnTouchOutside(true)
             bottomDialog!!.setCancelable(true)
             bottomDialog!!.window!!.setGravity(Gravity.BOTTOM)
@@ -90,7 +88,7 @@ class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
     }
 
     override fun onItemChildClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
-        listener?.onMenuClick(position, adapter.getItem(position) as String)
+        listener?.onMenuClick(position, (adapter.getItem(position) as BottomMenu).menu)
         dismiss()
     }
 }
