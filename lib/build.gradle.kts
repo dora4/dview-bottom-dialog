@@ -25,9 +25,9 @@ android {
 }
 
 dependencies {
-    implementation("androidx.recyclerview:recyclerview:1.3.1")
-    implementation("com.github.dora4:dview-colors:1.0")
-    api("io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.10")
+    compileOnly("androidx.recyclerview:recyclerview:1.3.1")
+    compileOnly("com.github.dora4:dview-colors:1.0")
+    compileOnly("io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.10")
 }
 
 afterEvaluate {
@@ -37,7 +37,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.dora4"
                 artifactId = rootProject.project.name
-                version = "1.6"
+                version = "1.7"
             }
         }
     }

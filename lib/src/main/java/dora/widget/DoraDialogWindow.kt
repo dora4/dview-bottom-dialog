@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 
+@Deprecated("使用DoraBottomDialog替换")
 open class DoraDialogWindow : ADialogWindow {
 
     private var canTouchOutside = false
