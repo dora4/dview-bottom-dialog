@@ -13,7 +13,7 @@ import java.lang.ClassCastException
 import java.lang.Exception
 import java.lang.reflect.Field
 
-@Deprecated("使用DoraBottomDialog替换")
+@Deprecated("使用DoraBottomDialog替换，将在未来版本移除")
 abstract class ADialogWindow {
     val shadowLayoutParams = FrameLayout.LayoutParams(
         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT

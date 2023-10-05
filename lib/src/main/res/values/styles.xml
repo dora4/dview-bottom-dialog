@@ -14,7 +14,7 @@
     </style>
 
     <style name="DoraView.BottomDialog.Animation" parent="Animation.AppCompat.Dialog">
-        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
-        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+        <item name="android:windowEnterAnimation">@anim/dview_translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dview_translate_dialog_out</item>
     </style>
 </resources>

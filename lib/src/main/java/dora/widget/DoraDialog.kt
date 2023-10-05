@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import dora.widget.bottomdialog.R
 
-@Deprecated("使用DoraBottomDialog替换")
+@Deprecated("使用DoraBottomDialog替换，将在未来版本移除")
 open class DoraDialog {
 
     protected var dialogWindow: ADialogWindow? = null

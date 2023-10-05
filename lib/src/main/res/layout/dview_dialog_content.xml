@@ -7,13 +7,13 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/ll"
+        android:id="@+id/ll_menu_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dview_recycler_view"
+            android:id="@+id/rv_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>

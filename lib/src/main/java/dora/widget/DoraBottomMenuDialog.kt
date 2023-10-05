@@ -53,7 +53,7 @@ class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
     }
 
     private fun initView(contentView: View, menus: Array<String>) {
-        val recyclerView = contentView.findViewById<RecyclerView>(R.id.dview_recycler_view)
+        val recyclerView = contentView.findViewById<RecyclerView>(R.id.rv_menu)
         val adapter = MenuAdapter()
         val list = mutableListOf<BottomMenu>()
         menus.forEachIndexed { index, s ->
