@@ -13,7 +13,7 @@ allprojects {
 }
 // 添加以下代码到app模块的build.gradle
 dependencies {
-    implementation 'com.github.dora4:dview-bottom-dialog:1.8'
+    implementation 'com.github.dora4:dview-bottom-dialog:1.9'
 }
 ```
 
@@ -33,5 +33,5 @@ dialog.setOnMenuClickListener(object : DoraBottomMenuDialog.OnMenuClickListener 
         startActivity(intent)
     }
 })
-dialog.show(this, arrayOf("外部浏览器打开"))
+dialog.show(this, arrayOf("外部浏览器打开", "刷新网页"))
 ```
