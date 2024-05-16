@@ -35,3 +35,11 @@ dialog.setOnMenuClickListener(object : DoraBottomMenuDialog.OnMenuClickListener 
 })
 dialog.show(this, arrayOf("外部浏览器打开", "刷新网页"))
 ```
+
+过时的底部弹窗。
+```kotlin
+val dialogWindow = DoraDialogWindow()
+DoraDialog.Builder(this)
+    .create(dialogWindow)
+    .show()
+```

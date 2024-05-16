@@ -48,7 +48,7 @@ open class DoraDialogWindow : ADialogWindow {
     }
 
     override fun addContent(
-        inflater: LayoutInflater?,
+        inflater: LayoutInflater,
         parent: ViewGroup?,
         viewRoot: LinearLayout
     ) {
@@ -68,7 +68,7 @@ open class DoraDialogWindow : ADialogWindow {
 
         contentView!!.setOnTouchListener { v, event -> true }
         viewRoot.addView(contentView)
-        onInflateListener?.onInflateFinish(contentView)
+        onInflateListener?.onInflateFinish(contentView!!)
     }
 
     override fun setShadowViewOutsideCanDismiss(shadeView: View?, canDismiss: Boolean) {
@@ -86,6 +86,6 @@ open class DoraDialogWindow : ADialogWindow {
     }
 
     interface OnInflateListener {
-        fun onInflateFinish(contentView: View?)
+        fun onInflateFinish(contentView: View)
     }
 }

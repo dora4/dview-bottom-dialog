@@ -74,7 +74,7 @@ abstract class ADialogWindow {
     abstract fun findViewById(resId: Int): View?
     abstract fun getContent() : View
     protected abstract fun addContent(
-        inflater: LayoutInflater?,
+        inflater: LayoutInflater,
         parent: ViewGroup?,
         viewRoot: LinearLayout
     )
