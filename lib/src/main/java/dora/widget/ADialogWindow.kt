@@ -119,7 +119,7 @@ abstract class ADialogWindow {
                 clazz = Class.forName("com.android.internal.R\$dimen")
                 obj = clazz.newInstance()
                 field = clazz.getField("status_bar_height")
-                x = field[obj].toString().toInt()
+                x = field?.get(obj).toString().toInt()
                 statusBarHeight = context.resources.getDimensionPixelSize(x)
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -157,7 +157,7 @@ abstract class ADialogWindow {
                 clazz = Class.forName("com.android.internal.R\$dimen")
                 obj = clazz.newInstance()
                 field = clazz.getField("navigation_bar_height")
-                x = field[obj].toString().toInt()
+                x = field?.get(obj).toString().toInt()
                 navigationBarHeight = context.resources.getDimensionPixelSize(x)
             } catch (e: Exception) {
                 e.printStackTrace()

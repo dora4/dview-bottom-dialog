@@ -76,7 +76,7 @@ class DoraBottomMenuDialog : View.OnClickListener, OnItemChildClickListener {
         tvCancel.setOnClickListener(this)
     }
 
-    private fun dismiss() {
+    fun dismiss() {
         bottomDialog?.dismiss()
         bottomDialog = null
     }

@@ -41,7 +41,7 @@ class DoraBottomDialog {
         return this
     }
 
-    private fun dismiss() {
+    fun dismiss() {
         bottomDialog?.dismiss()
         bottomDialog = null
     }
