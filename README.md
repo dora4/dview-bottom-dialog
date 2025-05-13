@@ -1,6 +1,7 @@
 dview-bottom-dialog
 ![Release](https://jitpack.io/v/dora4/dview-bottom-dialog.svg)
 --------------------------------
+![DORA视图 底部召唤阵](https://github.com/user-attachments/assets/dcc72744-8f52-4649-9941-91fa2758d450)
 
 ##### 卡名：Dora视图 BottomDialog 
 ###### 卡片类型：效果怪兽
