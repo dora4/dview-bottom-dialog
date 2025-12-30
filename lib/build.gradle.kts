@@ -6,11 +6,10 @@ plugins {
 
 android {
     namespace = "dora.widget.bottomdialog"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
     }
     buildTypes {
         release {
@@ -19,15 +18,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.7.1")
     api("androidx.recyclerview:recyclerview:1.3.2")
-    api("com.github.dora4:dview-colors:1.0")
+    api("com.github.dora4:dview-colors:1.1")
     compileOnly("io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.10")
 }
 
