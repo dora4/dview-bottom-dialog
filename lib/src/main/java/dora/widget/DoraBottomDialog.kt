@@ -13,15 +13,15 @@ class DoraBottomDialog {
 
     private var bottomDialog: Dialog? = null
 
-    fun show(activity: Activity, @LayoutRes resId: Int, block: ((contentView: View) -> Unit)? = null): DoraBottomDialog {
+    fun show(activity: Activity, @LayoutRes resId: Int, block: (DoraBottomDialog.(contentView: View) -> Unit)? = null): DoraBottomDialog {
         val contentView = LayoutInflater.from(activity).inflate(resId, null)
         show(activity, contentView, block)
         return this
     }
 
-    fun show(activity: Activity, contentView: View, block: ((contentView: View) -> Unit)? = null) : DoraBottomDialog {
+    fun show(activity: Activity, contentView: View, block: (DoraBottomDialog.(contentView: View) -> Unit)? = null) : DoraBottomDialog {
         if (bottomDialog == null && !activity.isFinishing) {
-            block?.invoke(contentView)
+            block?.invoke(this, contentView)
             bottomDialog = Dialog(activity, R.style.DoraView_AlertDialog)
             bottomDialog!!.setContentView(contentView)
             bottomDialog!!.setCanceledOnTouchOutside(true)
